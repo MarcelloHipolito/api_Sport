@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elenco do Sport Recife</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="sport recife logo.png" 
+           alt="Escudo do Sport" 
+           class="logo">
+      <div class="header-info">
+        <h1>Sport Club Recife</h1>
+        <p>Temporada 2025</p>
+      </div>
+    </header>
+
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" 
+               id="search-input" 
+               placeholder="Busque por jogador..."
+               aria-label="Campo de busca">
+        <button id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      
+      <select id="position-filter" class="filter-select">
+        <option value="">Todas Posições</option>
+        <option value="Goleiro">Goleiro</option>
+        <option value="Zagueiro">Zagueiro</option>
+        <option value="Lateral">Lateral</option>
+        <option value="Volante">Volante</option>
+        <option value="Meia">Meia</option>
+        <option value="Atacante">Atacante</option>
+      </select>
+    </div>
+
+    <div class="stats-bar">
+      <span id="player-count">0</span> jogadores listados
+    </div>
+
+    <main>
+      <ul id="players-list" class="players-grid"></ul>
+    </main>
+
+    <footer class="footer">
+      <p>Dados do elenco profissional</p>
+      <p>© 2025 Sport Club Recife</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
