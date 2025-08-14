@@ -4,7 +4,7 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 
-// Objeto com jogadores do Sport Club Recife (dados fictícios)
+// Elenco do Sport Club Recife 
 const players = [
   {
     id: 1,
@@ -13,7 +13,7 @@ const players = [
     number: 22,
     age: 29,
     nationality: "Brasileiro",
-    photo: "https://img.a.transfermarkt.technology/portrait/medium/408850-1580199430.jpg?lm=1" // (URL fictícia)
+    photo: "https://img.a.transfermarkt.technology/portrait/medium/408850-1580199430.jpg?lm=1" 
   },
   {
     id: 2,
@@ -323,4 +323,5 @@ app.get('/api/players/search/:name', (req, res) => {
 });
 
 const PORT = 3000;
+
 app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
