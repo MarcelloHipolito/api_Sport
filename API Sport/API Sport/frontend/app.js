@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const positionFilter = document.getElementById('position-filter');
   const playersList = document.getElementById('players-list');
 
-  // Carrega todos os jogadores inicialmente
+  // Carrega todos os jogadores início
   fetchPlayers();
 
-  // Evento de busca ao digitar
+  // Busca ao digitar
   searchInput.addEventListener('input', (e) => {
       const searchTerm = e.target.value.trim();
       if (searchTerm.length > 0) {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 
-  // Evento de busca ao clicar no botão
+  // Busca ao clicar no botão
   searchBtn.addEventListener('click', () => {
       const searchTerm = searchInput.value.trim();
       searchPlayers(searchTerm);
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 
-  // Filtra jogadores por posição (client-side)
+  // Filtra jogadores por posição 
   function filterPlayers(position) {
       if (!position) {
           fetchPlayers();
@@ -115,4 +115,5 @@ document.addEventListener('DOMContentLoaded', () => {
   function showError(msg) {
       playersList.innerHTML = `<li class="error">${msg}</li>`;
   }
+
 });
